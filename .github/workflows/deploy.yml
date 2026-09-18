@@ -1,0 +1,36 @@
+# Deploy the site to Cloudflare Pages on every push to main.
+#
+# This project is a Direct Upload Pages project, and Cloudflare cannot convert
+# one of those to a Git-connected project — the only way to get the built-in
+# integration is a brand new project, which would take a new *.pages.dev
+# subdomain. drillwake.pages.dev is the privacy and support URL on the App Store
+# listing, so the domain has to stay exactly where it is. This does the same job
+# from the other side: GitHub pushes, wrangler uploads.
+#
+# Needs two repository secrets (Settings -> Secrets and variables -> Actions):
+#   CLOUDFLARE_API_TOKEN   a token with the "Cloudflare Pages:Edit" permission
+#   CLOUDFLARE_ACCOUNT_ID  the account the drillwake project lives in
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # so a failed deploy cannot be silently ignored
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # The site is plain static files at the repo root; there is no build.
+          command: pages deploy . --project-name=drillwake --branch=main
