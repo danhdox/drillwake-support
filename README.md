@@ -1,6 +1,8 @@
 # DRILLWAKE Support
 
-Public support and privacy pages for the DRILLWAKE iOS game.
+Public marketing, support, privacy, and terms pages for the Drillwake iOS game.
 
-- Support: <https://danhdox.github.io/drillwake-support/support/>
-- Privacy: <https://danhdox.github.io/drillwake-support/privacy/>
+- Home: <https://drillwake.pages.dev/>
+- Support: <https://drillwake.pages.dev/support/>
+- Privacy: <https://drillwake.pages.dev/privacy/>
+- Terms: <https://drillwake.pages.dev/terms/>

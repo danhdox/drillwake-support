@@ -3,40 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0604" />
-    <meta name="description" content="Official support and privacy information for DRILLWAKE." />
-    <title>DRILLWAKE — Support</title>
+    <meta name="theme-color" content="#120b07" />
+    <meta name="description" content="Drillwake is a deep-mining adventure for iPhone." />
+    <link rel="canonical" href="https://drillwake.pages.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Drillwake" />
+    <meta property="og:title" content="Drillwake" />
+    <meta property="og:description" content="A deep-mining adventure for iPhone." />
+    <meta property="og:url" content="https://drillwake.pages.dev/" />
+    <meta property="og:image" content="https://drillwake.pages.dev/assets/drillwake-pod.png" />
+    <meta property="og:image:alt" content="The Drillwake pod above mineral-rich earth" />
+    <title>Drillwake</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/drillwake-pod.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="shell">
-      <header class="brand">
-        <a class="wordmark" href="./">DRILLWAKE</a>
-        <nav aria-label="Support pages">
+  <body class="landing-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="landing-canvas">
+      <img class="landing-art" src="./assets/drillwake-pod.png" alt="" width="1024" height="1024" />
+      <div class="landing-shade" aria-hidden="true"></div>
+
+      <header class="site-header landing-header">
+        <a class="wordmark" href="./" aria-label="Drillwake home">
+          <img src="./assets/drillwake-pod.png" alt="" width="32" height="32" />
+          <span>Drillwake</span>
+        </a>
+        <nav aria-label="Main navigation">
           <a href="./support/">Support</a>
           <a href="./privacy/">Privacy</a>
         </nav>
       </header>
-      <main>
-        <p class="eyebrow">Dig deep. Get rich. Try not to explode.</p>
-        <h1>Help from the surface.</h1>
-        <p class="lede">
-          Official support and privacy information for DRILLWAKE, the offline deep-mining
-          adventure for iPhone.
-        </p>
-        <div class="cards">
-          <a class="card" href="./support/">
-            <strong>Get support</strong>
-            <span>Report a problem and see what details help us investigate it.</span>
-          </a>
-          <a class="card" href="./privacy/">
-            <strong>Privacy policy</strong>
-            <span>Read how DRILLWAKE handles local game data and personal information.</span>
-          </a>
-        </div>
+
+      <main id="main" class="landing-copy">
+        <h1>Mine the depths.</h1>
+        <p>Drill through an alien world, upgrade your pod, and make it back to the surface.</p>
+        <a class="app-store-link" href="https://apps.apple.com/us/app/drillwake/id6791994787" target="_blank" rel="noopener noreferrer" aria-label="View Drillwake on the App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.05 12.54c.03-2.66 2.17-3.94 2.27-4-1.24-1.82-3.18-2.07-3.87-2.1-1.63-.17-3.22.98-4.05.98-.84 0-2.11-.96-3.48-.93-1.76.03-3.4 1.05-4.3 2.63-1.88 3.25-.48 8.03 1.32 10.66.9 1.28 1.94 2.7 3.31 2.65 1.34-.06 1.84-.85 3.46-.85 1.6 0 2.08.85 3.48.82 1.44-.03 2.35-1.28 3.21-2.57 1.04-1.47 1.46-2.92 1.48-2.99-.03-.01-2.8-1.07-2.83-4.3ZM14.38 4.71A4.75 4.75 0 0 0 15.47 1.3a4.84 4.84 0 0 0-3.14 1.63 4.57 4.57 0 0 0-1.12 3.29 4 4 0 0 0 3.17-1.51Z" />
+          </svg>
+          <span>View on the App Store</span>
+        </a>
       </main>
-      <footer class="fine-print">© 2026 Andrew Do. DRILLWAKE.</footer>
+
+      <footer class="site-footer landing-footer">
+        <p>© 2026 Drillwake</p>
+        <nav aria-label="Footer navigation">
+          <a href="./support/">Support</a>
+          <a href="./privacy/">Privacy</a>
+          <a href="./terms/">Terms</a>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>

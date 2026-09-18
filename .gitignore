@@ -1,0 +1,4 @@
+# Wrangler leaves account and build caches here after a Pages deploy.
+.wrangler/
+
+.DS_Store
